@@ -1,0 +1,62 @@
+How to dockerize a spring boot app:
+
+1) Create catalog src/main/docker
+
+2) Add Dockerfile inside this catalog
+
+3) Add FROM, ADD, EXPOSE and ENTRYPOINT to the Dockerfile
+
+
+*********************************************
+
+
+What is inside the Dockerfile ?
+
+FROM: This is the base image. Example: FROM openjdk:8
+
+ADD: Adds the jar built by the application into the docker container.
+        -jar built by the application: target/ moap-0.0.1-SNAPSHOT.jar
+        -into the container: Just add it to the root of the container. Example: ADD target/ moap-0.0.1-SNAPSHOT.jar docker-app.jar
+        -The name of the app in the container is docker-app.jar
+
+EXPOSE: Expose the app in the container on a port. Example: EXPOSE 8085.
+
+ENTRYPOINT: Allow the container to run as a executable. Example:  ENTRYPOINT ["java", "-jar", "docker-app.jar"]
+
+
+*********************************************
+
+Next we need to build the image.
+
+Open a terminal windows and navigate to the root of the project.
+        Example: ~/projects/moap$ pwd
+                 /home/frode/projects/moap
+
+Run this command: $ docker build -f src/main/docker/Dockerfile -t docker-app .
+
+Output:
+Sending build context to Docker daemon  18.56MB
+Step 1/4 : FROM openjdk:8
+ ---> b8d3f94869bb
+Step 2/4 : ADD target/moap-0.0.1-SNAPSHOT.jar docker-app.jar
+ ---> 749b2329e134
+Step 3/4 : EXPOSE 8085
+ ---> Running in 36a1bdfbb81d
+Removing intermediate container 36a1bdfbb81d
+ ---> 820b26f81b99
+Step 4/4 : ENTRYPOINT ["java", "-jar", "docker-app.jar"]
+ ---> Running in 9f17b81f5be2
+Removing intermediate container 9f17b81f5be2
+ ---> 8ad3fe7c57fb
+Successfully built 8ad3fe7c57fb
+Successfully tagged docker-app:latest
+
+*********************************************
+
+Next we need to run the image.
+
+Open a terminal windows and navigate to the root of the project.
+        Example: ~/projects/moap$ pwd
+                 /home/frode/projects/moap
+
+Run this command: $ docker run -p 8085:8085 docker-app
