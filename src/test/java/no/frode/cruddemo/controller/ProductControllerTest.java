@@ -1,6 +1,5 @@
 package no.frode.cruddemo.controller;
 
-import no.frode.cruddemo.controller.ProductController;
 import no.frode.cruddemo.dto.ProductDTO;
 import no.frode.cruddemo.entity.Product;
 import no.frode.cruddemo.exception.ProductNotFoundException;
