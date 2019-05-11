@@ -1,6 +1,5 @@
 package  no.frode.cruddemo.service;
 
-import no.frode.cruddemo.ReportService;
 import no.frode.cruddemo.entity.Product;
 import no.frode.cruddemo.model.FinancialReport;
 import no.frode.cruddemo.repository.ProductRepository;

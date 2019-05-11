@@ -1,4 +1,4 @@
-package no.frode.cruddemo;
+package no.frode.cruddemo.service;
 
 import no.frode.cruddemo.entity.Product;
 import no.frode.cruddemo.model.FinancialReport;

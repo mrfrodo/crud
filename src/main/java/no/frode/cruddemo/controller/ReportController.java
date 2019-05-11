@@ -1,6 +1,6 @@
 package no.frode.cruddemo.controller;
 
-import no.frode.cruddemo.ReportService;
+import no.frode.cruddemo.service.ReportService;
 import no.frode.cruddemo.model.FinancialReport;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

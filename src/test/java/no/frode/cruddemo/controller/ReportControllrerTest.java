@@ -1,7 +1,6 @@
 package no.frode.cruddemo.controller;
 
-import no.frode.cruddemo.ReportService;
-import no.frode.cruddemo.controller.ReportController;
+import no.frode.cruddemo.service.ReportService;
 import no.frode.cruddemo.entity.Product;
 import no.frode.cruddemo.model.FinancialReport;
 import org.junit.Before;
@@ -11,11 +10,8 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
-import java.util.*;
-
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
 
 public class ReportControllrerTest {
 
