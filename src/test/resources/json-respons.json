@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "productName": "Eplekake",
+    "category": "Kake",
+    "imageLink": "http://eplekake.com/",
+    "unitCost": 50.0,
+    "unitPrice": 100.0,
+    "numberSold": 100
+  },
+  {
+    "id": 2,
+    "productName": "Banankake",
+    "category": "Kake",
+    "imageLink": "http://banankake.com/",
+    "unitCost": 95.0,
+    "unitPrice": 150.0,
+    "numberSold": 100
+  },
+  {
+    "id": 3,
+    "productName": "Ananaskake",
+    "category": "Kake",
+    "imageLink": "http://ananas.com/",
+    "unitCost": 25.0,
+    "unitPrice": 100.0,
+    "numberSold": 1000
+  },
+  {
+    "id": 4,
+    "productName": "Gulrotkake",
+    "category": "Kake",
+    "imageLink": "http://gulrotkake.com/",
+    "unitCost": 75.0,
+    "unitPrice": 100.0,
+    "numberSold": 5000
+  },
+  {
+    "id": 5,
+    "productName": "Ostekake",
+    "category": "Kake",
+    "imageLink": "http://ostekake.com/",
+    "unitCost": 50.0,
+    "unitPrice": 50.0,
+    "numberSold": 1000
+  },
+  {
+    "id": 6,
+    "productName": "Kneipbrød",
+    "category": "Brød",
+    "imageLink": "http://kneipbrød.com/",
+    "unitCost": 50.0,
+    "unitPrice": 30.0,
+    "numberSold": 1000
+  }
+]
