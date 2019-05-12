@@ -110,7 +110,7 @@ public class ReportService {
         return highestMarginProduct;
     }
 
-    private Product lowestMarginProduct(List<Product> allProducts) {
+    protected Product lowestMarginProduct(List<Product> allProducts) {
 
         Product lowestMarginProduct = allProducts.stream().min(Comparator.comparing(Product::getMargin)).get();
 

@@ -38,7 +38,6 @@ public class ReportServiceTest {
         FinancialReport report = reportService.generateReport();
 
         assertEquals(new Double("26"), report.getTotalTurnover());
-
     }
 
     @Test
@@ -50,8 +49,6 @@ public class ReportServiceTest {
         FinancialReport report = reportService.generateReport();
 
         assertEquals(new Double("7"), report.getTotalCost());
-
-
     }
 
     @Test
@@ -63,7 +60,6 @@ public class ReportServiceTest {
         FinancialReport report = reportService.generateReport();
 
         assertEquals(new Double("19"), report.getTotalMargin());
-
     }
 
     @Test
@@ -156,13 +152,25 @@ public class ReportServiceTest {
         assertEquals(new Double("2.0"), lowestMarginProduct.getUnitCost());
         assertEquals(new BigInteger("1"), lowestMarginProduct.getNumberSold());
 
-
     }
 
     @Test
     public void timestamp_of_when_the_report_was_generated() {
 
 
+    }
+
+    @Test
+    public void lowest_margin_product() {
+
+        Product lowestMarginProduct = reportService.lowestMarginProduct(createProductList());
+
+        assertEquals("eplekake", lowestMarginProduct.getProductName());
+        assertEquals("kake", lowestMarginProduct.getCategory());
+        assertEquals("http://eplekake.org", lowestMarginProduct.getImageLink());
+        assertEquals(new Double("3.0"), lowestMarginProduct.getUnitPrice());
+        assertEquals(new Double("2.0"), lowestMarginProduct.getUnitCost());
+        assertEquals(new BigInteger("1"), lowestMarginProduct.getNumberSold());
     }
 
     private List<Product> createProductList() {
