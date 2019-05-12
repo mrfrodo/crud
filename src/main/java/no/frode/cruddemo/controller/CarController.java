@@ -18,6 +18,6 @@ public class CarController {
     // GET Method for reading operation
     @GetMapping("/cars")
     public List<Car> getAllCars() {
-        return carService.findAll();
+        return carService.getAllCars();
     }
 }
