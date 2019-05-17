@@ -2,20 +2,22 @@ package no.frode.cruddemo.cache;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import org.springframework.stereotype.Component;
+
 import java.lang.ref.SoftReference;
 import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 
+@Component
 public class InMemCache implements Cache {
 
     private final ConcurrentHashMap<String, SoftReference<CacheObject>> cache = new ConcurrentHashMap<>();
-
-
+    
     public InMemCache() {
         Thread cleanup = new Thread(() -> {
             while (!Thread.currentThread().isInterrupted()) {
                 try {
-                    Thread.sleep(5 * 1000);
+                    Thread.sleep(60 * 1000);
                     System.out.println("__Clearing cache");
                     cache.entrySet().removeIf(entry -> Optional.ofNullable(entry.getValue()).map(SoftReference::get).map(CacheObject::isExpired).orElse(false));
                 } catch (InterruptedException e) {
