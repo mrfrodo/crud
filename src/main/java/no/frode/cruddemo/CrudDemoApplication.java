@@ -22,7 +22,7 @@ public class CrudDemoApplication {
     Environment env;
 
     public static void main(String[] args) {
-        logger.info("__Starting CrudDemoApplication");
+        logger.info("________Starting CrudDemoApplication______");
 
         SpringApplication app = new SpringApplication(CrudDemoApplication.class);
 
@@ -58,7 +58,8 @@ public class CrudDemoApplication {
     @Bean
     public void checkEnironments() {
         String[] profiles = env.getDefaultProfiles();
-        logger.info(profiles.toString());
+        for (String s : profiles) {
+            logger.info("__profile {}__", s);
+        }
     }
-
 }
