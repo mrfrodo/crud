@@ -20,12 +20,9 @@ import java.util.List;
 @RequestMapping(name = "Orders", value = "orders")
 public class OrderController {
     private static final Logger logger = LoggerFactory.getLogger(OrderController.class);
-    private final OrderService orderService;
 
     @Autowired
-    public OrderController(OrderService orderService) {
-        this.orderService = orderService;
-    }
+    OrderService orderService;
 
     @GetMapping(value = "/")
     List<Product> getOrders() {
