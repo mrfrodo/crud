@@ -9,4 +9,4 @@ http://localhost:8080/demo/actuator/health
 
 http://localhost:8080/demo/products/
 
-
+curl http://localhost:8080/demo/products/
