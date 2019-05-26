@@ -1,6 +1,6 @@
 package no.frode.cruddemo.controller;
 
-import no.frode.cruddemo.entity.Product;
+import no.frode.cruddemo.entity.Order;
 import no.frode.cruddemo.service.OrderService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,8 +25,8 @@ public class OrderController {
     OrderService orderService;
 
     @GetMapping(value = "/")
-    List<Product> getOrders() {
-        logger.info("__getAllOrders");
+    List<Order> getOrders() {
+        logger.info("__getOrders");
         return orderService.getAllOrders();
     }
 }

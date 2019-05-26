@@ -1,7 +1,6 @@
 package no.frode.cruddemo.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import javax.persistence.*;
 import java.math.BigInteger;
 

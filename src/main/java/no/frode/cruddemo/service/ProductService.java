@@ -39,7 +39,6 @@ public class ProductService {
 
     }
 
-    //@Todo create delete functionality
     public Product deleteProduct(Long id) {
 
         Optional<Product> optionalProduct = productRepository.findById(id);
@@ -61,7 +60,6 @@ public class ProductService {
         return productRepository.save(product);
     }
 
-    //@Todo create update functionality
     public Product updateProduct(Long id, ProductDTO inputProduct) {
 
         Optional<Product> optionalProduct = productRepository.findById(id);
@@ -77,7 +75,6 @@ public class ProductService {
         }
     }
 
-
     public ProductDTO convertToDTO(Product product) {
 
         ProductDTO productDTO = modelMapper.map(product, ProductDTO.class);
@@ -91,6 +88,4 @@ public class ProductService {
         return product;
 
     }
-
-
 }

@@ -1,11 +1,9 @@
 package no.frode.cruddemo.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table(name="car")
 public class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
