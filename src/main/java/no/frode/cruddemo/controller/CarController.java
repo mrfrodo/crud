@@ -10,13 +10,12 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1")
+@RequestMapping(name = "Cars", value = "cars")
 public class CarController {
     @Autowired
     private CarService carService;
 
-    // GET Method for reading operation
-    @GetMapping("/cars")
+    @GetMapping("/")
     public List<Car> getAllCars() {
         return carService.getAllCars();
     }

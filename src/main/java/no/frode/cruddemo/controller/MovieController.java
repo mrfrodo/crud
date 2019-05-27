@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "movies")
+@RequestMapping(name="Movies", value = "movies")
 public class MovieController {
 
     @Autowired
