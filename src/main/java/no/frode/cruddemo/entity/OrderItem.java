@@ -10,7 +10,7 @@ import javax.validation.constraints.NotNull;
 import java.util.Objects;
 
 @Entity
-@Table(name = "order_item")
+@Table(name = "cr_order_item")
 public class OrderItem {
 
     @Id

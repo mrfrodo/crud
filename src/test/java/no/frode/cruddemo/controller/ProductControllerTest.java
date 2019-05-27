@@ -39,10 +39,9 @@ public class ProductControllerTest {
             productList.add(p);
         });
 
-
         when(productService.getAllProducts()).thenReturn(productList);
 
-        List<Product> productList1 = productController.getProducts();
+        List<Product> productList1 = productController.getAllProducts();
 
         verify(productService).getAllProducts();
 

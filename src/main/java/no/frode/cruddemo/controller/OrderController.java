@@ -25,8 +25,8 @@ public class OrderController {
     OrderService orderService;
 
     @GetMapping(value = "/")
-    List<Order> getOrders() {
-        logger.info("__getOrders");
+    List<Order> getAllOrders() {
+        logger.info("__getAllOrders");
         return orderService.getAllOrders();
     }
 }

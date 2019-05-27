@@ -3,7 +3,7 @@ package no.frode.cruddemo.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name="car")
+@Table(name="cr_car")
 public class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

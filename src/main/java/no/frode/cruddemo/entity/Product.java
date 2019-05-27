@@ -11,7 +11,7 @@ import java.math.BigInteger;
  */
 
 @Entity
-@Table(name="product")
+@Table(name="cr_product")
 public class Product {
 
     @Id

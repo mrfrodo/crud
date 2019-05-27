@@ -3,6 +3,8 @@ package no.frode.cruddemo.controller;
 import no.frode.cruddemo.dto.ProductDTO;
 import no.frode.cruddemo.entity.Product;
 import no.frode.cruddemo.service.ProductService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
@@ -16,12 +18,14 @@ import java.util.List;
 @RestController
 @RequestMapping(name = "Products", value = "products")
 public class ProductController {
+    private static final Logger logger = LoggerFactory.getLogger(ProductController.class);
 
     @Autowired
     ProductService productService;
 
     @GetMapping(value = "/")
-    List<Product> getProducts() {
+    List<Product> getAllProducts() {
+        logger.info("__getAllProducts");
         return productService.getAllProducts();
     }
 
