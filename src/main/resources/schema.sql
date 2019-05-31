@@ -1,11 +1,11 @@
 create table cr_product(
   id INTEGER IDENTITY PRIMARY KEY,
-  product_name varchar(50),
-  unit_price numeric,
+  productName varchar(50),
+  unitPrice numeric,
   category varchar(50),
-  image_link varchar(120),
-  number_sold  numeric,
-  unit_cost numeric
+  imageLink varchar(120),
+  numberSold  numeric,
+  unitCost numeric
 );
 
 create table cr_car(

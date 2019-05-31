@@ -19,6 +19,8 @@ public class Product {
     Long id;
     String productName;
     String category;
+
+    @Column(name = "imageLink")
     String imageLink;
     Double unitCost;
     Double unitPrice;

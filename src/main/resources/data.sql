@@ -1,4 +1,5 @@
-insert into cr_product( product_name, unit_price, category, image_link, number_sold, unit_cost)values
+insert into cr_product( productName, unitPrice, category,
+imageLink, numberSold, unitCost) values
 ('Eplekake',100,'Kake','http://eplekake.com/',100,50),
 ('Banankake',150,'Kake','http://banankake.com/',100,95),
 ('Ananaskake',100,'Kake','http://ananas.com/',1000,25),
