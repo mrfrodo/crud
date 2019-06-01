@@ -17,7 +17,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = CrudDemoApplication.class)
-@TestPropertySource(value={"classpath:application.properties"})
+@TestPropertySource(value={"classpath:__application.properties__"})
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 public class ReportControllerIntTest {
     @Value("${server.port}")
