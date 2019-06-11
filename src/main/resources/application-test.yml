@@ -1,0 +1,32 @@
+##################
+#   Server
+##################
+server:
+  servlet:
+    context-path: /demo
+  port: 8080
+
+########################
+#   Database Settings
+########################
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/gandalf
+    platform: postgres
+    name: gandalf
+    username: gandalf
+    password: gandalf
+    driverClassName: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+    hibernate:
+      ddl-auto: validate
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        show_sql: true
+        use_sql_comments: true
+        format_sql: true
+
+
