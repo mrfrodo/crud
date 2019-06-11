@@ -1,0 +1,7 @@
+##################
+#   Server
+##################
+server:
+  servlet:
+    context-path: /demo
+  port: 8080

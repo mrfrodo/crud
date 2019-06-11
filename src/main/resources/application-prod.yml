@@ -1,21 +1,13 @@
-##################
-#   Server
-##################
-server:
-  servlet:
-    context-path: /demo
-  port: 8080
-
 ########################
 #   Database Settings
 ########################
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/gandalf
+    url: jdbc:postgresql://in.the.cloud:5432/gandalf
     platform: postgres
     name: gandalf
-    username: sa
-    password: sa
+    username: gandalf
+    password: superhemmelig
     driverClassName: org.postgresql.Driver
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQL9Dialect

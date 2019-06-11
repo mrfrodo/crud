@@ -28,18 +28,11 @@ public class CrudDemoApplication {
 
         String environement = System.getenv("ENVIRONMENT");
 
-        if (environement == null) {
-            environement = "dev";
-            app.setAdditionalProfiles(environement);
-        }
-
-
         if (environement != null) {
             app.setAdditionalProfiles(environement.toLowerCase());
         }
 
         app.run(args);
-        //SpringApplication.run(CrudDemoApplication.class, args);
     }
 
     void checkProfiles() {
