@@ -4,6 +4,7 @@
 spring:
   datasource:
     url: jdbc:h2:mem:testdb
+    url2: jdbc:h2:mem:testdb2
     platform: h2
     username: sa
     password: sa
