@@ -24,7 +24,6 @@ public class Product {
     Double unitPrice;
     BigInteger numberSold;
 
-
     public String getProductName() {
         return productName;
     }
