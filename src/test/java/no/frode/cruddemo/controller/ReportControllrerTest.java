@@ -1,17 +1,15 @@
 package no.frode.cruddemo.controller;
 
-import no.frode.cruddemo.service.ReportService;
 import no.frode.cruddemo.entity.Product;
 import no.frode.cruddemo.model.FinancialReport;
+import no.frode.cruddemo.service.ReportService;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-
 import static org.junit.Assert.assertEquals;
-import static org.mockito.Mockito.verify;
 
 public class ReportControllrerTest {
 
