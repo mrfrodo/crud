@@ -10,6 +10,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Profile;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import static com.jayway.restassured.RestAssured.get;
@@ -18,7 +19,7 @@ import static org.hamcrest.Matchers.equalTo;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = CrudDemoApplication.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
-@Profile("dev")
+@ActiveProfiles("dev")
 public class ReportControllerIntTest {
     @Value("${server.port}")
     int port;
