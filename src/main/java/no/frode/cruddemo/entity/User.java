@@ -15,4 +15,6 @@ public class User {
     @ElementCollection
     private List<String> middleName = new ArrayList<>();
     private String lastName;
+    @OneToMany
+    private List<Address> addres;
 }
