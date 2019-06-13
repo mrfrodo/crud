@@ -10,7 +10,7 @@ spring:
     password: gandalf
     driverClassName: org.postgresql.Driver
   jpa:
-    database-platform: org.hibernate.dialect.PostgreSQL91Dialect
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
     hibernate:
       ddl-auto: update
       naming:
@@ -22,4 +22,4 @@ spring:
         format_sql: true
         jdbc:
           lob:
-            non_contextual_creation=true:
+            non_contextual_creation: true
