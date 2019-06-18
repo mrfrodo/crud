@@ -5,6 +5,7 @@ import com.jayway.restassured.response.Response;
 import com.jayway.restassured.response.ResponseBody;
 import no.frode.cruddemo.CrudDemoApplication;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -19,6 +20,7 @@ import static org.hamcrest.Matchers.equalTo;
 @ContextConfiguration(classes = CrudDemoApplication.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @ActiveProfiles("dev")
+@Ignore
 public class ReportControllerIntTest {
     @LocalServerPort
     int port;
